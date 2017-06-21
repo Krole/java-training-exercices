@@ -13,7 +13,8 @@ public class DeckGenerator implements IDeckGenerator {
 		// fill the deck with cards
         // Probably use the good modulo
 		for (int i = 1; i <= 52; i++) {
-
+			Card card = generateCard(i);
+			deck.add(card);
 		}
 		return deck;
 	}

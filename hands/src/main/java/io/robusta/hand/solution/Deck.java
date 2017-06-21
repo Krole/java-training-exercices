@@ -20,24 +20,33 @@ public class Deck extends LinkedList<Card> implements IDeck{
 	
 	@Override
 	public Card pick() {
+		Collections.shuffle(this);
+		return this.pollFirst();
 		// shuffle;
 		// remove card from deck and returns it
-		return null;
 	}
 
-
-	
 
 	@Override
 	public TreeSet<Card> pick(int number) {
+		
+		int i = 0;
+		TreeSet<Card> cards = new TreeSet<>();
+		while ( i < number ){
+			cards.add(this.pick());
+			i++;
+			}
 		// reuse pick()
-		return null;
+		return cards;
 	}
+	
 
 	@Override
 	public Hand giveHand() {
+		Hand hands = new Hand();	
+		hands.addAll(this.pick(5));
 		// A hand is a **5** card TreeSet
-		return null;
+		return hands;
 	}
 	
 	
