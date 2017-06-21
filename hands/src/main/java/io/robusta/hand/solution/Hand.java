@@ -1,16 +1,13 @@
 package io.robusta.hand.solution;
 
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.Set;
 import java.util.TreeSet;
 
 import io.robusta.hand.Card;
 import io.robusta.hand.HandClassifier;
 import io.robusta.hand.HandValue;
-import io.robusta.hand.interfaces.IDeck;
 import io.robusta.hand.interfaces.IHand;
 import io.robusta.hand.interfaces.IHandResolver;
 
@@ -18,14 +15,14 @@ public class Hand extends TreeSet<Card> implements IHand {
 
 	private static final long serialVersionUID = 7824823998655881611L;
 
-	@Override
+	/*@Override
 	public Set<Card> changeCards(IDeck deck, Set<Card> cards) {
 
 		// For exemple remove three cards from this hand
 		// , and get 3 new ones from the Deck
 		// returns the new given cards
 		return null;
-	}
+	}*/
 
 	/**
 	 * beats is the same than compareTo, but with a nicer name. The problem is
