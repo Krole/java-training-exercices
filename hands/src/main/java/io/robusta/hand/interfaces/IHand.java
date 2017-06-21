@@ -45,3 +45,4 @@ public interface IHand extends SortedSet<Card>, IHandResolver{
 	
 	
 }
+
